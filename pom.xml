@@ -83,8 +83,8 @@ We use these goals frequently to keep the dependencies and plugins up-to-date:
         <maven.exec.version>1.5.0</maven.exec.version>
         <maven.gwt.plugin>1.0-rc-6</maven.gwt.plugin>
         <scala.maven.version>3.3.1</scala.maven.version>
-        <scala.version>2.12.3</scala.version>
-        <scala.compat.version>2.12</scala.compat.version>
+        <scala.version>2.10.6</scala.version>
+        <scala.compat.version>2.10</scala.compat.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -136,6 +136,19 @@ We use these goals frequently to keep the dependencies and plugins up-to-date:
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
                 <version>${maven.install.version}</version>
+            </plugin>
+        <plugin>
+                <groupId>org.ekstazi</groupId>
+                <artifactId>ekstazi-maven-plugin</artifactId>
+                <version>5.0.1</version>
+                <executions>
+                    <execution>
+                        <id>ekstazi</id>
+                        <goals>
+                            <goal>select</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
         <pluginManagement>
@@ -412,7 +425,7 @@ We use these goals frequently to keep the dependencies and plugins up-to-date:
                                                 </goals>
                                             </pluginExecutionFilter>
                                             <action>
-                                                <ignore />
+                                                <ignore/>
                                             </action>
                                         </pluginExecution>
                                         <pluginExecution>
@@ -425,7 +438,7 @@ We use these goals frequently to keep the dependencies and plugins up-to-date:
                                                 </goals>
                                             </pluginExecutionFilter>
                                             <action>
-                                                <ignore />
+                                                <ignore/>
                                             </action>
                                         </pluginExecution>
                                         <pluginExecution>
@@ -438,7 +451,7 @@ We use these goals frequently to keep the dependencies and plugins up-to-date:
                                                 </goals>
                                             </pluginExecutionFilter>
                                             <action>
-                                                <ignore />
+                                                <ignore/>
                                             </action>
                                         </pluginExecution>
                                         <pluginExecution>
@@ -451,7 +464,7 @@ We use these goals frequently to keep the dependencies and plugins up-to-date:
                                                 </goals>
                                             </pluginExecutionFilter>
                                             <action>
-                                                <ignore />
+                                                <ignore/>
                                             </action>
                                         </pluginExecution>
                                     </pluginExecutions>
@@ -482,7 +495,7 @@ We use these goals frequently to keep the dependencies and plugins up-to-date:
                                     <executable>java</executable>
                                     <arguments>
                                         <argument>-classpath</argument>
-                                        <classpath />
+                                        <classpath/>
                                         <argument>io.vavr.JmhRunner</argument>
                                     </arguments>
                                 </configuration>
@@ -507,3 +520,4 @@ We use these goals frequently to keep the dependencies and plugins up-to-date:
         </profile>
     </profiles>
 </project>
+
